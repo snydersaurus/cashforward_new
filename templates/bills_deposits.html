@@ -1,0 +1,27 @@
+<div class="col-md-4">
+	<h4>Add Transaction</h4>
+	<form role="form">
+		<div class="form-group">
+			<input class="form-control input-sm" name="paymentName" type="text" class="form-control" ng-model="name" placeholder="Payee, e.g. Chipotle">
+		</div>
+		<div class="form-group">
+			<input class="form-control input-sm" name="paymentDate" type="text" class="form-control" ng-model="date" placeholder="Date, e.g. 2/3/2014">
+		</div>
+		<div class="form-group">
+			<div class="input-group input-group-sm">
+			  <span class="input-group-addon">$</span>
+			  <input type="text" placeholder="Amount, e.g. 4.50" class="form-control">
+			</div>
+		</div>
+		<button type="submit" class="btn btn-default pull-right">Add</button>
+	</form>
+</div>
+<div class="col-md-4">
+	<h4>All Transactions</h4>
+	<div class="list-group">
+	  <a href="" class="list-group-item" ng-repeat="entry in transactions">
+	    <h4 class="list-group-item-heading">{{entry.Name}}<small class="pull-right">{{entry.Amount}}</small></h4>
+	    <p class="list-group-item-text">{{entry.Description}}</p>
+	  </a>
+	</div>
+</div>

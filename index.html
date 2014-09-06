@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"" ng-app="cashforward">
+<html lang="en" ng-app="cashforward">
 <head>
   <meta charset="utf-8">
   <title>Cashforward</title>
@@ -33,9 +33,11 @@
 
 </head>
 <body> 	
-	<div ng-view>
-	</div>
-  </div>
-  
+	<div ng-include="'templates/header.html'"></div>
+	<div class="col-md-2" ng-include="'templates/side-menu.html'"></div>
+  	<div class="col-md-10">		
+  		<div ng-view>
+  		</div>
+  	</div>
 </body>
 </html>
